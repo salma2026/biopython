@@ -1,4 +1,5 @@
 from Bio import SeqIO
+from Bio.SeqUtils import GC
 import os
 
 def main():
@@ -8,7 +9,7 @@ def main():
    with open(file) as handle:
        for record in SeqIO.parse(handle, e):
            print(record.id , record.seq , len(record.seq))
-
+           GC(record)
 
 
 
