@@ -5,7 +5,7 @@ def main():
    file = input("file:")
    name, ending = os.path.splitext(file)
    e = ending.strip(".")
-   with open(name) as handle:
+   with open(file) as handle:
        for record in SeqIO.parse(handle, e):
            print(record.id)
 
