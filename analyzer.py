@@ -3,6 +3,7 @@ import os
 
 def main():
    file = input("file:")
+   name, ending = os.path.splitext(file)
    
 
 
