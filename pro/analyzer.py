@@ -7,7 +7,7 @@ def main():
    e = ending.strip(".")
    with open(file) as handle:
        for record in SeqIO.parse(handle, e):
-           print(record.id , record.seq , len(record))
+           print(record.id , record.seq , len(record.seq))
 
 
 
