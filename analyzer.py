@@ -4,7 +4,9 @@ import os
 def main():
    file = input("file:")
    name, ending = os.path.splitext(file)
-   for record in seqIO.parse(name, ending):
+   e = ending.strip(".")
+   
+   for record in SeqIO.parse(name, e):
        print(record.id)
 
 
