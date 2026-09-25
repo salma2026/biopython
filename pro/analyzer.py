@@ -9,7 +9,7 @@ def main():
    with open(file) as handle:
        for record in SeqIO.parse(handle, e):
            print(record.id , record.seq , len(record.seq))
-           GC(record)
+           print(GC(record.seq))
 
 
 
