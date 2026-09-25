@@ -1,5 +1,5 @@
 from Bio import SeqIO
-from Bio.SeqUtils import GC
+from Bio.SeqUtils import gc_fraction
 import os
 
 def main():
@@ -9,7 +9,7 @@ def main():
    with open(file) as handle:
        for record in SeqIO.parse(handle, e):
            print(record.id , record.seq , len(record.seq))
-           print(GC(record.seq))
+           print(gc_fraction(record.seq) * 100)
 
 
 
